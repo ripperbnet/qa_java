@@ -1,32 +1,11 @@
 package com.example;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import java.util.Arrays;
 import java.util.List;
 import static org.junit.Assert.*;
 
-@RunWith(Parameterized.class)
+
 public class FelineTest {
-
-    @Parameterized.Parameters
-    public static Iterable<Object[]> data() {
-        return Arrays.asList(new Object[][] {
-                { 1, 1 },
-                { 0, 0 },
-                { -1, -1 },
-                { 2, 2 }
-        });
-    }
-
-    @Parameterized.Parameter(0)
-    public int actual;
-
-    @Parameterized.Parameter(1)
-    public int expected;
-
-
 
     @Test
     public void eatMeatTest() throws Exception {
@@ -54,10 +33,8 @@ public class FelineTest {
     @Test
     public void getKittensTest() {
         Feline feline = new Feline();
-     //   int actual = feline.getKittens();
-        assertEquals(expected, actual);
-        assertEquals(expected, actual);
-        assertEquals(expected, actual);
+        int actual = feline.getKittens();
+        int expected = 1;
         assertEquals(expected, actual);
     }
 }
