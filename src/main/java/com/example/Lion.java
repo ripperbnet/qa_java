@@ -8,13 +8,11 @@ public class Lion {
 
     private Predator predator;
 
-  // public Lion(Feline feline) {
-   //    this.predator = feline;
- // }
-
-    public Lion(String sex, Feline feline) throws Exception {
+    public Lion(Feline feline) {
         this.predator = feline;
+    }
 
+    public Lion(String sex) throws Exception {
         if ("Самец".equals(sex)) {
             hasMane = true;
         } else if ("Самка".equals(sex)) {
