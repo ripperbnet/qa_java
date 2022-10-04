@@ -14,10 +14,6 @@ public class Feline extends Animal implements Predator {
         return "Кошачьи";
     }
 
-    public String getSound() {
-        return "Мяу";
-    }
-
     public int getKittens() {
         return getKittens(1);
     }
@@ -25,4 +21,5 @@ public class Feline extends Animal implements Predator {
     public int getKittens(int kittensCount) {
         return kittensCount;
     }
+
 }
