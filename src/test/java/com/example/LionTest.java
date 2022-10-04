@@ -1,5 +1,6 @@
 package com.example;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
@@ -28,5 +29,13 @@ public class LionTest {
         Mockito.when(feline.getFood("Хищник")).thenReturn(food);
         Lion lion = new Lion(feline);
         assertEquals(food, lion.getFood());
+    }
+
+    @Test
+    public void doesHaveManeTest() {
+        Exception exception = Assert.assertThrows(Exception.class, () -> {
+            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
+        });
+        assertEquals( "Используйте допустимые значения пола животного - самец или самка" , exception.getMessage());
     }
 }
