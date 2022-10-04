@@ -61,7 +61,4 @@ public class LionTest {
         boolean expected = false;
         assertEquals(expected, actual);
     }
-
-
-
 }
