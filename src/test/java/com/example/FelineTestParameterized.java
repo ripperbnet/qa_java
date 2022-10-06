@@ -28,9 +28,6 @@ public class FelineTestParameterized {
         @Test
         public void getKittensTest() {
             assertEquals(expected, actual);
-            assertEquals(expected, actual);
-            assertEquals(expected, actual);
-            assertEquals(expected, actual);
         }
 }
 

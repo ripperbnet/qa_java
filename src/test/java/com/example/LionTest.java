@@ -20,7 +20,7 @@ public class LionTest {
         Mockito.when(feline.getKittens()).thenReturn(1);
         Lion lion = new Lion("Самка", feline);
         int expected = 1;
-        assertEquals(expected, lion.getKittens());
+        assertEquals(expected, feline.getKittens());
     }
 
     @Test
@@ -32,33 +32,10 @@ public class LionTest {
     }
 
     @Test
-    public void createLionManExceptionTest(){
-        Assert.assertThrows(Exception.class, () -> {
-            new Lion("qwer", feline);
-        });
-    }
-
-    @Test
     public void doesHaveManeExceptionTest() {
         Exception exception = Assert.assertThrows(Exception.class, () -> {
-            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
+            new Lion("исключение", feline);
         });
         assertEquals( "Используйте допустимые значения пола животного - самец или самка" , exception.getMessage());
-    }
-
-    @Test
-    public void createLionMaleTest() throws Exception {
-        Lion lion = new Lion("Самец", feline);
-        boolean actual = lion.doesHaveMane();
-        boolean expected = true;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void createLionFemaleTest() throws Exception {
-        Lion lion = new Lion("Самка", feline);
-        boolean actual = lion.doesHaveMane();
-        boolean expected = false;
-        assertEquals(expected, actual);
     }
 }

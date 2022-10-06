@@ -21,7 +21,11 @@ public class Lion {
     }
 
     public int getKittens() {
-        return predator.getKittens();
+        return getKittens(1);
+    }
+
+    public int getKittens(int kittensCount) {
+        return kittensCount;
     }
 
     public boolean doesHaveMane() {
